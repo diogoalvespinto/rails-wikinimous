@@ -1,0 +1,15 @@
+<h1>
+<%= @article.title.capitalize %></h1>
+<h5>
+  <%= @article.content.capitalize %>
+  <br>
+</h5>
+<%= link_to "Delete article",
+  article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+
+
+
+<%= link_to "Back to my articles", articles_path %>
+<%= link_to "Edit this article", edit_article_path %>
